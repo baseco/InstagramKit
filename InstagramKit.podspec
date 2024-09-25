@@ -16,7 +16,7 @@ An extensive Objective C SDK for the Instagram API.
 
   s.ios.deployment_target = '9.0'
   s.source_files = 'InstagramKit/Classes/**/*'
-  s.dependency 'AFNetworking', '~>4.0.1'
+  s.dependency 'AFNetworking', :git => 'git@github.com:baseco/AFNetworking.git', :tag => '4.0.1'
   s.default_subspec = 'InstagramKit-without-UICKeyChainStore'
   
   s.subspec 'InstagramKit-without-UICKeyChainStore' do |exclude_uickeychainstore|
