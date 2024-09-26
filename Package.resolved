@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AFNetworking",
+        "repositoryURL": "https://github.com/baseco/AFNetworking.git",
+        "state": {
+          "branch": "2.3.1_with_package_swift",
+          "revision": "116a7b417cefcb6a2dd24c121b9ddc6edc85f73d",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

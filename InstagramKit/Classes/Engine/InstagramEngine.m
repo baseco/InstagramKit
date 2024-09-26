@@ -278,7 +278,6 @@
     NSString *percentageEscapedPath = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
     [self.httpManager GET:percentageEscapedPath
                parameters:params
-                 progress:nil
                   success:^(NSURLSessionDataTask *task, id responseObject) {
                       if (!success) return;
                       NSDictionary *responseDictionary = (NSDictionary *)responseObject;
@@ -302,7 +301,6 @@
     NSString *percentageEscapedPath = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
     [self.httpManager GET:percentageEscapedPath
                parameters:params
-                 progress:nil
                   success:^(NSURLSessionDataTask *task, id responseObject) {
                       if (!success) return;
                       NSDictionary *responseDictionary = (NSDictionary *)responseObject;
@@ -335,7 +333,6 @@
     NSDictionary *params = [self dictionaryWithAccessTokenAndParameters:parameters];
     [self.httpManager POST:path
                 parameters:params
-                  progress:nil
                    success:^(NSURLSessionDataTask *task, id responseObject) {
                        (success)? success((NSDictionary *)responseObject) : 0;
                    }
@@ -364,7 +361,9 @@
 
 - (NSDictionary *)serializedResponseDataFromError:(NSError *)error
 {
-    NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+    NSData *errorData = nil;
+    //fixme: AFNetworking 2.3.1 doesnt pass that
+   // NSData *errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
     if (errorData != nil) {
       return [NSJSONSerialization JSONObjectWithData: errorData options:kNilOptions error:nil];
     } else {
