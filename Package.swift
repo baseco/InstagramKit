@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/baseco/AFNetworking.git", .branch("2.3.1_with_package_swift")),
+        .package(url: "https://github.com/baseco/AFNetworking.git", .revision("75441a7")),
         // .package(url: "https://github.com/kishikawakatsumi/UICKeyChainStore.git", from: "2.2.1")
     ],
     targets: [
