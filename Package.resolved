@@ -5,8 +5,8 @@
         "package": "AFNetworking",
         "repositoryURL": "https://github.com/baseco/AFNetworking.git",
         "state": {
-          "branch": "2.3.1_with_package_swift",
-          "revision": "116a7b417cefcb6a2dd24c121b9ddc6edc85f73d",
+          "branch": "75441a7",
+          "revision": "75441a7d92ac7c37e705d4c744f279b639081253",
           "version": null
         }
       }
