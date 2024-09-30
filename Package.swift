@@ -13,7 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/baseco/AFNetworking.git", .revision("75441a7")),
+        .package(url: "https://github.com/baseco/AFNetworking.git", .revision("75441a7d92ac7c37e705d4c744f279b639081253")),
         // .package(url: "https://github.com/kishikawakatsumi/UICKeyChainStore.git", from: "2.2.1")
     ],
     targets: [
