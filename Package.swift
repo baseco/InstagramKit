@@ -22,12 +22,10 @@ let package = Package(
             dependencies: [
                 "AFNetworking"
             ],
-            path: "InstagramKit/Classes",
-            exclude: [], // Exclude any files if necessary
+            path: "InstagramKit",
+            publicHeadersPath: "include",
             cSettings: [
-             .headerSearchPath("."),
-             .headerSearchPath("Engine"),
-             .headerSearchPath("Models")
+             .headerSearchPath("include/InstagramKit")
             ]
         )//,
         // .target(
